@@ -4,4 +4,15 @@
 .ft{
     text-align: right;
     float:right;
+    margin-right: 50px;
+}
+body{
+    background-color: #f8f8ff;
+}
+footer h2,h6,.row{
+    margin-left: 50px;
+}
+
+.lien{
+    color: white;
 }
