@@ -30,7 +30,7 @@
 
                     <input type="submit" id='submit' value='LOGIN' >
 
-                    <button class="btn btn-Succes grand" ><a href="../html/accueil.html">inscription</a></button>
+                    <button class="btn btn-success grand" ><a class="test" href="../html/accueil.html">inscription</a></button></div>
                     
                 </form>
                 
