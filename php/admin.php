@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <p>bonjour</p>
+    <?php
+       session_start();
+       echo $_SESSION['MAIL']; 
+
+    ?>
 </body>
 </html>

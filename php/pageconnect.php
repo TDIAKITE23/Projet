@@ -21,6 +21,11 @@
                 
                 <form action="verification.php" method="POST">
                     <h1>Connexion</h1>
+
+                    <input type="radio" name="genre" value="etu" required/> <label><b>Etudiants</b></label>
+                    <input type="radio" name="genre" value="prof" required/><label><b>Professeur</b></label>
+                    <input type="radio" name="genre" value="admin" required/> <label><b>Admin</b></label><br>
+
                     
                     <label><b>E-mail</b></label>
                     <input type="text" placeholder="Entrer votre e-mail" name="username" required>
