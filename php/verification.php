@@ -10,6 +10,7 @@
             while($res=mysqli_fetch_array($req)){
                 if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                     $test=1;
+                    $id=res['ID'];
                 }
             }
             if($test==0){
@@ -18,7 +19,7 @@
             else {
                 $_SESSION['MAIL']=$pseudo;
                 $_SESSION['MDP']=$mdp;
-                $_SESSION['ID']=$res['ID'];
+                $_SESSION['ID']=$id;
                 header('Location: etudiant.php');
             }
         }
@@ -31,6 +32,7 @@
                 while($res=mysqli_fetch_array($req)){
                     if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                         $test=1;
+                        $id=res['ID'];
                     }
                 }
                 if($test==0){
@@ -39,7 +41,7 @@
                 else {
                     $_SESSION['MAIL']=$pseudo;
                     $_SESSION['MDP']=$mdp;
-                    $_SESSION['ID']=$res['ID'];
+                    $_SESSION['ID']=$id;
                     header('Location: prof.php');
                 }
             }
@@ -51,6 +53,7 @@
                 while($res=mysqli_fetch_array($req)){
                     if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                         $test=1;
+                        $id=res['ID'];
                     }
                 }
                 if($test==0){
@@ -59,7 +62,7 @@
                 else {
                     $_SESSION['MAIL']=$pseudo;
                     $_SESSION['MDP']=$mdp;
-                    $_SESSION['ID']=$res['ID'];
+                    $_SESSION['ID']=$id;
                     header('Location: admin.php');
                 }
             }
