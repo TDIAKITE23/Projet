@@ -2,6 +2,7 @@
     session_start();
     include "connexion.php";
         $test=0;
+        $id=0;
         if($_POST['genre']=='etu'){
             $pseudo=$_POST['username'];
             $mdp=$_POST['password'];
@@ -10,7 +11,7 @@
             while($res=mysqli_fetch_array($req)){
                 if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                     $test=1;
-                    $id=res['ID'];
+                    $id=$res['ID'];
                 }
             }
             if($test==0){
@@ -32,7 +33,7 @@
                 while($res=mysqli_fetch_array($req)){
                     if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                         $test=1;
-                        $id=res['ID'];
+                        $id=$res['ID'];
                     }
                 }
                 if($test==0){
@@ -53,7 +54,7 @@
                 while($res=mysqli_fetch_array($req)){
                     if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
                         $test=1;
-                        $id=res['ID'];
+                        $id=$res['ID'];
                     }
                 }
                 if($test==0){
