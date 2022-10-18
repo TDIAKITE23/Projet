@@ -24,7 +24,7 @@
 
                     <input type="radio" name="genre" value="etu" required/> <label><b>Etudiants</b></label>
                     <input type="radio" name="genre" value="prof" required/><label><b>Professeur</b></label>
-                    <input type="radio" name="genre" value="admin" required/> <label><b>Admin</b></label><br>
+                    <input type="radio" name="genre" value="admin" required/> <label><b>Autres</b></label><br>
 
                     
                     <label><b>E-mail</b></label>
