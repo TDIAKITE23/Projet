@@ -16,6 +16,24 @@
         <title>connexion</title>
     </head>
     <body>
+
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="../img/Logo.jpg" width="40" height="40" cd > DiakiSaad
+            </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="../html/acceuil.html" class="nav-link" href="#"> Acceuil </a>
+            </li>
+            <li class="nav-item">
+                <a href="../html/contact.html" class="nav-link" href="#"> Contact </a>
+            </li>
+            </ul>
+                
+        
+        </nav>
+
+
         <div id="container">
                 <!-- zone de connexion -->
                 
