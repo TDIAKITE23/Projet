@@ -43,7 +43,7 @@ li {
    }
    
    
-.droite{
+.row{
     margin-left: 50px;
 }
 body{
@@ -53,4 +53,7 @@ body{
     text-align: right;
     float:right;
     margin-right: 50px;
+}
+footer h2,h6{
+    margin-left: 50px;
 }
