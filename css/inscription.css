@@ -41,11 +41,7 @@ li {
 .menu li {
     padding: 5px 14px;
    }
-   
-#bjr{
-    text-align: center;
-}
-.ft{
+   .ft{
     text-align: right;
     float:right;
     margin-right: 50px;
@@ -54,7 +50,3 @@ body{
     background-color: #f8f8ff;
     font-style: Calisto;
 }
-footer h2,h6,.row{
-    margin-left: 50px;
-}
-
