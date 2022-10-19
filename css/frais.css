@@ -57,3 +57,11 @@ body{
 footer h2,h6{
     margin-left: 50px;
 }
+table.myclass td {
+    background-color: #f8f8ff;
+    border-spacing: 5cm;
+}
+table.myclass {
+    column-width: 6cm;
+    column-gap: 6cm;
+}
