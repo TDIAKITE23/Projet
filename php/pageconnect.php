@@ -28,6 +28,9 @@
             <li class="nav-item">
                 <a href="../html/contact.html" class="nav-link" href="#"> Contact </a>
             </li>
+            <li class="nav-item">
+                <a href="../html/frais.html" class="nav-link" href="#"> frais </a>
+            </li>
             </ul>
                 
         
@@ -42,7 +45,7 @@
 
                     <input type="radio" name="genre" value="etu" required/> <label><b>Etudiants</b></label>
                     <input type="radio" name="genre" value="prof" required/><label><b>Professeur</b></label>
-                    <input type="radio" name="genre" value="admin" required/> <label><b>Autres</b></label><br>
+                    <input type="radio" name="genre" value="admin" required/> <label><b>Admin</b></label><br>
 
                     
                     <label><b>E-mail</b></label>
@@ -53,7 +56,7 @@
 
                     <input type="submit" id='submit' value='LOGIN' >
 
-                    <button class="btn btn-success grand" ><a class="test" href="../html/accueil.html">inscription</a></button></div>
+                    <button class="btn btn-success grand" ><a class="test" href="../html/inscription.html">inscription</a></button></div>
                     
                 </form>
                 
