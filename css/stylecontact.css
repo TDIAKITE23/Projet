@@ -1,7 +1,7 @@
 #hey{
     text-align: center;
 }
-.droite{
+.row{
     margin-left: 50px;
 }
 body{
@@ -12,7 +12,9 @@ footer .ft{
     float:right;
     margin-right: 50px;
 }
-
+.row2{
+    margin-left: 50px;
+}
 
 * {
     margin: 0;
