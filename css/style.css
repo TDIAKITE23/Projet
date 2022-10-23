@@ -63,3 +63,8 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
+.erreur{
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+}

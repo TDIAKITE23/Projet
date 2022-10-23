@@ -1,3 +1,97 @@
+<?php
+    session_start();
+    if(isset($_POST["valider"])){
+        include "connexion.php";
+        $test=0;
+        $id=0;
+        $nom="";
+        $erreur="";
+        if($_POST['genre']=='etu'){
+            $pseudo=$_POST['username'];
+            $mdp=$_POST['password'];
+            $req=$connexion->query("SELECT * FROM etudiant");
+
+            while($res=mysqli_fetch_array($req)){
+                if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
+                    $test=1;
+                    $id=$res['ID'];
+                    $nom=$res['NOM'];
+                }
+            }
+            if($test==0){
+                $erreur="Adresse mail ou mot de passe incorrect";
+            }
+            else {
+                $_SESSION['MAIL']=$pseudo;
+                $_SESSION['MDP']=$mdp;
+                $_SESSION['ID']=$id;
+                $_SESSION['NOM']=$nom;
+                header('Location: etudiant.php');
+            }
+        }
+        else{
+            if($_POST['genre']=='prof'){
+                $pseudo=$_POST['username'];
+                $mdp=$_POST['password'];
+                $req=$connexion->query("SELECT * FROM professeurs");
+    
+                while($res=mysqli_fetch_array($req)){
+                    if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
+                        $test=1;
+                        $id=$res['ID'];
+                        $nom=$res['NOM'];
+                    }
+                }
+                if($test==0){
+                    $erreur="Adresse mail ou mot de passe incorrect";
+                }
+                else {
+                    $_SESSION['MAIL']=$pseudo;
+                    $_SESSION['MDP']=$mdp;
+                    $_SESSION['ID']=$id;
+                    $_SESSION['NOM']=$nom;
+                    header('Location: prof.php');
+                }
+            }
+            else {
+                $pseudo=$_POST['username'];
+                $mdp=$_POST['password'];
+                $req=$connexion->query("SELECT * FROM admin");
+    
+                while($res=mysqli_fetch_array($req)){
+                    if($res['MAIL']==$pseudo && $res['MDP']==$mdp){
+                        $test=1;
+                        $id=$res['ID'];
+                        $nom=$res['NOM'];
+                    }
+                }
+                if($test==0){
+                    $erreur="Adresse mail ou mot de passe incorrect";
+                }
+                else {
+                    $_SESSION['MAIL']=$pseudo;
+                    $_SESSION['MDP']=$mdp;
+                    $_SESSION['ID']=$id;
+                    $_SESSION['NOM']=$nom;
+                    header('Location: admin.php');
+                }
+            }
+            
+        }
+
+
+
+
+    }
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +101,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
-       <link rel="stylesheet" href="../css/style.css">   
+        <link rel="stylesheet" href="../css/style.css">   
         <!-- JavaScripts -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -40,8 +134,15 @@
         <div id="container">
                 <!-- zone de connexion -->
                 
-                <form action="verification.php" method="POST">
+                <form action="" method="POST">
                     <h1>Connexion</h1>
+
+                    <?php
+                        if(isset($erreur)){
+                            echo "<p class='erreur'>".$erreur."</p>";
+                        }
+
+                    ?>
 
                     <input type="radio" name="genre" value="etu" required/> <label><b>Etudiants</b></label>
                     <input type="radio" name="genre" value="prof" required/><label><b>Professeur</b></label>
@@ -54,7 +155,7 @@
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-                    <input type="submit" id='submit' value='LOGIN' >
+                    <input type="submit" id='submit' value='LOGIN' name="valider" >
 
                     <button class="btn btn-success grand" ><a class="test" href="../html/inscription.html">inscription</a></button></div>
                     
