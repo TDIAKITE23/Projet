@@ -49,7 +49,14 @@
                     
                             <h3> 
                                 
-                                Vous etes inscrits dans le parcours de 2nde.
+                                Vous etes inscrits dans le parcours de <?php 
+                                include "connexion.php";
+                                
+                                $ok=$_SESSION['ID_CLASSES'];
+                                $req=$connexion->query("SELECT * FROM classe WHERE ID=$ok");
+                                $res=mysqli_fetch_array($req);
+                                echo $res['NOM'];
+                                ?>
                                 <br/>
                             </h3>
                             <h4>
