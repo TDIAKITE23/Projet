@@ -6,6 +6,7 @@
 }
 body{
     background-color:#f8f8ff;
+    font-family: Comic Sans MS;
 }
 footer .ft{
     text-align: right;
@@ -20,42 +21,39 @@ footer .ft{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   }
-   body {
-    font-family: Comic Sans MS;
-   }
-   a {
+}
+a {
     text-decoration: none;
-   }
-   li {
+}
+li {
     list-style: inside;
-   }
-   .navbar {
+}
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     background-color: teal;
     color: #fff;
-   }
-   .nav-links a {
+}
+.nav-links a {
     color: #fff;
-   }
+}
    /* LOGO */
-   .logo {
+.logo {
     font-size: 32px;
-   }
+}
    /* NAVBAR MENU */
-   .menu {
+.menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
-   }
-   .menu li:hover {
+}
+.menu li:hover {
     background-color: #4c9e9e;
     border-radius: 5px;
     transition: 0.3s ease;
-   }
-   .menu li {
+}
+.menu li {
     padding: 5px 14px;
-   }
+}
