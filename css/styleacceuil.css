@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
    }
-body {
+body{
+    background-color:#f8f8ff;
     font-family: Comic Sans MS;
-    background-color: #f8f8ff;
-   }
+}
 a {
     text-decoration: none;
    }

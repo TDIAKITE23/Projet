@@ -33,7 +33,7 @@
                     <input type="submit" value="modifier" />
                 </form>
 
-
+                <br>
                 <form action="bannir.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $res["ID"]; ?>"/>
                     <input type="submit" value="Supprimer" />
