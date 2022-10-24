@@ -42,5 +42,7 @@
     ?>
     <br>
     <a href="./afficheretu.php">afficher les etudiants</a>
+        <br>
+    <a href="./afficherprof.php">afficher les professeurs</a>
 </body>
 </html>
