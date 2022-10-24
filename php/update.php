@@ -16,7 +16,7 @@ $req=$connexion->query("UPDATE etudiant SET NOM='$nom',PRENOM='$prenom',MAIL='$m
 if($req){
     echo "mise à jour effectuée"."<br>";
     ?>
-    <html><a href="./admin.php">cliquz ici</a></html>
+    <html><a href="./admin.php">cliquez ici</a></html>
     <?php
 }else{
     echo 'erreur';

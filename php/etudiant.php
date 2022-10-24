@@ -69,7 +69,7 @@
                                 $req=$connexion->query("SELECT * FROM matieres WHERE ID_CLASSES=$ok");
                                 while($res=mysqli_fetch_array($req)){
                                     ?>
-                                    <ul><li><?php echo $res['NOM'] ?></li></ul>;
+                                    <ul><li><?php echo $res['NOM'] ?></li></ul>
                                     <?php
                                     
                                 }
@@ -86,7 +86,7 @@
                                 $req=$connexion->query("SELECT * FROM professeurs WHERE ID_CLASSES=$ok");
                                 while($res=mysqli_fetch_array($req)){
                                     ?>
-                                    <ul><li><?php echo $res['NOM'] ?></li></ul>;
+                                    <ul><li><?php echo $res['PRENOM']." ".$res['NOM'] ?></li></ul>
                                     <?php
                                     
                                 }

@@ -70,7 +70,7 @@
                                 $req=$connexion->query("SELECT * FROM etudiant WHERE ID_CLASSES=$ok");
                                 while($res=mysqli_fetch_array($req)){
                                     ?>
-                                    <ul><li><?php echo $res['NOM'] ?></li></ul>;
+                                    <ul><li><?php echo $res['PRENOM']." ".$res['NOM'] ?></li></ul>
                                     <?php
                                     
                                 }

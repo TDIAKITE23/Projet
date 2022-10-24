@@ -5,6 +5,7 @@
 }
 body {
     font-family: Comic Sans MS;
+    background-color: #f8f8ff;
 }
 a {
     text-decoration: none;
@@ -45,9 +46,6 @@ li {
    
 .row{
     margin-left: 50px;
-}
-body{
-    background-color: #f8f8ff;
 }
 .ft{
     text-align: right;
