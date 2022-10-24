@@ -26,7 +26,7 @@
         $req=$connexion->query("SELECT * FROM etudiant");
         while ($res=mysqli_fetch_array($req)){
             ?>
-            <p><?= $res['NOM']; ?> 
+            <p><?= $res['PRENOM']." ".$res['NOM']; ?> 
 
                 <form action="modifier.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $res["ID"]; ?>"/>
@@ -41,12 +41,13 @@
 
         
             </p>
+            <hr>
             <?php
         }
         
 
     ?>
     <hr>
-    <button class="btn btn-outline-primary"><a href="../html/inscription.html">Inscrire</a></button>
+    <button class="btn btn-outline-primary"><a href="../html/inscription.html">Inscrire un étudiant</a></button>
 </body>
 </html>

@@ -26,25 +26,26 @@
         $req=$connexion->query("SELECT * FROM professeurs");
         while ($res=mysqli_fetch_array($req)){
             ?>
-            <p><?= $res['NOM']; ?> 
+            <p><?= $res['PRENOM']." ".$res['NOM']; ?> 
 
                 <form action="modifprof.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $res["ID"]; ?>"/>
                     <input type="submit" value="modifier" />
                 </form>
 
-
+                <br>
                 <form action="bannirprof.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $res["ID"]; ?>"/>
                     <input type="submit" value="Supprimer" />
                 </form>
         
             </p>
+            <hr>
             <?php
         }
 
     ?>
     <hr>
-    <button class="btn btn-outline-primary"><a href="../html/inscription.html">Inscrire</a></button>
+    <button class="btn btn-outline-primary"><a href="../html/inscription.html">Inscrire un prof</a></button>
 </body>
 </html>
