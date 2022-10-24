@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 17, 2022 at 01:30 PM
+-- Generation Time: Oct 24, 2022 at 04:44 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -51,17 +51,17 @@ INSERT INTO `admin` (`ID`, `NOM`, `PRENOM`, `MAIL`, `MDP`) VALUES
 
 CREATE TABLE `classe` (
   `ID` int(11) NOT NULL,
-  `NUM` int(11) DEFAULT NULL
+  `NOM` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `classe`
 --
 
-INSERT INTO `classe` (`ID`, `NUM`) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+INSERT INTO `classe` (`ID`, `NOM`) VALUES
+(1, 'terminale'),
+(2, 'première'),
+(3, 'seconde');
 
 -- --------------------------------------------------------
 
@@ -83,8 +83,27 @@ CREATE TABLE `etudiant` (
 --
 
 INSERT INTO `etudiant` (`ID`, `ID_CLASSES`, `NOM`, `PRENOM`, `MAIL`, `MDP`) VALUES
-(1, NULL, 'RICK', 'RIRI', 'RICK@GMAIL.COM', 'rick'),
-(2, NULL, 'Essabri', 'Youness', 'YOUNESS@GMAIL.COM', 'youness');
+(1, 1, 'RICK', 'RIRI', 'RICK@GMAIL.COM', 'rick'),
+(2, 1, 'YOUNESS', 'ESSABRI', 'youness@gmail.com', 'oui'),
+(15, 1, 'KHODADIN', 'SAARAH', 'tabassumkhodadin@hotmail.com', 'Saarah'),
+(16, 1, 'SAMAHA', 'ELIO', 'ELIO@GMAIL.COM', 'etu'),
+(17, 1, 'CAREL', 'JUSTIN', 'JUSTIN@GMAIL.COM', 'etu'),
+(18, 1, 'GUINDY', 'BIDO', 'bido@gmail.com', 'etu'),
+(19, 1, 'YATTASSAYE', 'MOHAMED', 'yatt@gmail.com', 'etu'),
+(20, 2, 'KHOURY', 'GEORGE', 'GEORGE@GMAIL.COM', 'etu'),
+(21, 2, 'VERT', 'LUIGI', 'LUIGI@GMAIL.COM', 'etu'),
+(22, 2, 'KART', 'MARIO', 'MARIO@GMAIL.COM', 'etu'),
+(23, 2, 'PEACH', 'PRINCESSE', 'PEACH@GMAIL.COM', 'etu'),
+(24, 2, 'BELLE', 'LA', 'BELLE@GMAIL.COM', 'etu'),
+(25, 2, 'BETE', 'ELA', 'BETE@GMAIL.COM', 'etu'),
+(26, 2, 'MARX', 'KARL', 'KARL@GMAIL.COM', 'etu'),
+(27, 3, 'REDDINGTON', 'RAYMOND', 'RAY@GMAIL.COM', 'etu'),
+(28, 3, 'HOLLAND', 'TOM', 'TOM@GMAIL.COM', 'etu'),
+(29, 3, 'PARKER', 'PETER', 'PETER@GMAIL.COM', 'etu'),
+(30, 3, 'KENT', 'CLARK', 'CLARK@GMAIL.COM', 'etu'),
+(31, 3, 'LANE', 'LOUIS', 'LOUIS@GMAIL.COM', 'etu'),
+(32, 3, 'MAN', 'SUPER', 'SUPERMAN@GMAIL.COM', 'etu'),
+(33, 3, 'MAN', 'IRON', 'IRONMAN@GMAIL.COM', 'etu');
 
 -- --------------------------------------------------------
 
@@ -114,14 +133,23 @@ CREATE TABLE `matieres` (
 --
 
 INSERT INTO `matieres` (`ID`, `ID_CLASSES`, `NOM`) VALUES
-(1, NULL, 'MATHS'),
-(2, NULL, 'PHYSIQUE'),
-(3, NULL, 'CHIMIE'),
-(4, NULL, 'BIOLOGIE'),
-(5, NULL, 'Philosophie'),
-(6, NULL, 'Histoire'),
-(7, NULL, 'Geographie'),
-(8, NULL, 'EPS');
+(1, 3, 'MATHS'),
+(2, 3, 'PHYSIQUE-CHIME'),
+(4, 3, 'BIOLOGIE'),
+(5, 1, 'Philosophie'),
+(7, 3, 'HIST-GEO'),
+(8, 3, 'EPS'),
+(9, 3, 'ANGLAIS 1'),
+(10, 2, 'ANGLAIS 2'),
+(11, 1, 'ANGLAIS 3'),
+(12, 2, 'MATHS2'),
+(13, 1, 'MATHS3'),
+(14, 2, 'PHYSIQUE-CHIMIE2'),
+(15, 1, 'PHYSIQUE-CHIMIE3'),
+(16, 2, 'BIOLOGIE2'),
+(17, 1, 'BIOLOGIE3'),
+(18, 2, 'HIST-GEO2'),
+(19, 2, 'EPS2');
 
 -- --------------------------------------------------------
 
@@ -144,7 +172,23 @@ CREATE TABLE `professeurs` (
 --
 
 INSERT INTO `professeurs` (`ID`, `ID_CLASSES`, `ID_MATIERES`, `NOM`, `PRENOM`, `MAIL`, `MDP`) VALUES
-(1, NULL, NULL, 'VONNEBUL', 'NATHAN', 'NATHAN@GMAIL.COM', 'projet');
+(1, 1, 13, 'VONNEBUL', 'NATHAN', 'NATHAN@GMAIL.COM', 'projet'),
+(8, 1, 5, 'WAOU', 'GEORGETTE', 'georgettewaou@gmail.com', 'prof'),
+(9, 1, 1, 'US', 'AMERICA', 'americaus@gmail.com', 'prof'),
+(10, 1, 15, 'EINSTEIN', 'ALBER', 'albert@gmail.com', 'prof'),
+(11, 1, 17, 'SISSOKO', 'MR', 'sissoko@gmail.com', 'prof'),
+(12, 2, 10, 'TRUMP', 'DONALD', 'trump@gmail.com', 'prof'),
+(13, 2, 12, 'TRAORE', 'SEKOU', 'sekou@gmail.com', 'prof'),
+(14, 2, 14, 'DEMBELE', 'ELVIS', 'elvis@gmail.com', 'prof'),
+(15, 2, 16, 'MENDEL', 'GREGORE', 'mendel@gmail.com', 'prof'),
+(16, 2, 18, 'CHARLEMAGNE', 'ROI', 'roi@gmail.com', 'prof'),
+(17, 2, 19, 'MESSI', 'LIONEL', 'messi@gmail.com', 'prof'),
+(18, 3, 1, 'SOUGANE', 'OUMAR', 'sougane@gmail.com', 'prof'),
+(19, 3, 2, 'DIALL', 'MR', 'diall@gmail.com', 'prof'),
+(20, 3, 4, 'DARWIN', 'CHARLE', 'darwin@gmail.com', 'prof'),
+(21, 3, 7, 'LOUIS', 'XIV', 'louis@gmail.com', 'prof'),
+(22, 3, 8, 'RONALDO', 'CRISTIANO', 'ronaldo@gmail.com', 'prof'),
+(23, 3, 9, 'BIDEN', 'JOE', 'joe@gmail.com', 'prof');
 
 --
 -- Indexes for dumped tables
@@ -211,19 +255,19 @@ ALTER TABLE `classe`
 -- AUTO_INCREMENT for table `etudiant`
 --
 ALTER TABLE `etudiant`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `matieres`
 --
 ALTER TABLE `matieres`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `professeurs`
 --
 ALTER TABLE `professeurs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables
