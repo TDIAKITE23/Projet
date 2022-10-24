@@ -4,7 +4,11 @@
     box-sizing: border-box;
    }
 body {
+<<<<<<< HEAD
     font-family: Comic Sans MS;
+=======
+    font-family: cursive;
+>>>>>>> c76821d25a53176d742055a1c25a7e941e8880df
     background-color: #f8f8ff;
    }
 a {

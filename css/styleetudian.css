@@ -5,6 +5,7 @@
    }
    body {
     font-family: cursive;
+    background-color:#f8f8ff;
    }
    a {
     text-decoration: none;
@@ -43,10 +44,6 @@
    }
 .hey{
     text-align: center;
-}
-body{
-    background-color:#f8f8ff;
-    
 }
 
 footer .ft{

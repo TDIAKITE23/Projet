@@ -5,7 +5,10 @@
         $test=0;
         $id=0;
         $nom="";
+        $prenom="";
         $erreur="";
+        $classe=0;
+        $mat=0;
         if($_POST['genre']=='etu'){
             $pseudo=$_POST['username'];
             $mdp=$_POST['password'];
@@ -16,6 +19,9 @@
                     $test=1;
                     $id=$res['ID'];
                     $nom=$res['NOM'];
+                    $prenom=$res['PRENOM'];
+                    $classe=$res['ID_CLASSES'];
+
                 }
             }
             if($test==0){
@@ -26,6 +32,8 @@
                 $_SESSION['MDP']=$mdp;
                 $_SESSION['ID']=$id;
                 $_SESSION['NOM']=$nom;
+                $_SESSION['PRENOM']=$prenom;
+                $_SESSION['ID_CLASSES']=$classe;
                 header('Location: etudiant.php');
             }
         }
@@ -40,6 +48,9 @@
                         $test=1;
                         $id=$res['ID'];
                         $nom=$res['NOM'];
+                        $prenom=$res['PRENOM'];
+                        $classe=$res['ID_CLASSES'];
+                        $mat=$res['ID_MATIERES'];
                     }
                 }
                 if($test==0){
@@ -50,6 +61,9 @@
                     $_SESSION['MDP']=$mdp;
                     $_SESSION['ID']=$id;
                     $_SESSION['NOM']=$nom;
+                    $_SESSION['PRENOM']=$prenom;
+                    $_SESSION['ID_CLASSES']=$classe;
+                    $_SESSION['ID_MATIERES']=$mat;
                     header('Location: prof.php');
                 }
             }
@@ -63,6 +77,7 @@
                         $test=1;
                         $id=$res['ID'];
                         $nom=$res['NOM'];
+                        $prenom=$res['PRENOM'];
                     }
                 }
                 if($test==0){
@@ -73,6 +88,7 @@
                     $_SESSION['MDP']=$mdp;
                     $_SESSION['ID']=$id;
                     $_SESSION['NOM']=$nom;
+                    $_SESSION['PRENOM']=$prenom;
                     header('Location: admin.php');
                 }
             }
