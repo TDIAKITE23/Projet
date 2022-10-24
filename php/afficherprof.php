@@ -34,7 +34,7 @@
                 </form>
 
 
-                <form action="bannir.php" method="post">
+                <form action="bannirprof.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $res["ID"]; ?>"/>
                     <input type="submit" value="Supprimer" />
                 </form>

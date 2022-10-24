@@ -14,7 +14,10 @@ $mdp=$_POST['mdp'];
 $req=$connexion->query("UPDATE etudiant SET NOM='$nom',PRENOM='$prenom',MAIL='$mail',MDP='$mdp' WHERE ID='$id'");
 
 if($req){
-    echo "mise à jour effectuée";
+    echo "mise à jour effectuée"."<br>";
+    ?>
+    <html><a href="./admin.php">cliquz ici</a></html>
+    <?php
 }else{
     echo 'erreur';
 }

@@ -38,11 +38,11 @@
         if(!$_SESSION['NOM']){
             header('location: pageconnect.php');
         }
-       echo "Bonjour ".$_SESSION['NOM']; 
     ?>
+    <h1>Bonjour <?php echo $_SESSION['NOM']; ?> </h1>
     <br>
-    <a href="./afficheretu.php">afficher les etudiants</a>
+    <h3><a href="./afficheretu.php">afficher les etudiants</a></h3>
         <br>
-    <a href="./afficherprof.php">afficher les professeurs</a>
+    <h3><a href="./afficherprof.php">afficher les professeurs</a></h3>
 </body>
 </html>

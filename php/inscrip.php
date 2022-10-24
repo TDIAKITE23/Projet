@@ -13,7 +13,10 @@
     if($_POST['ok']=='etu'){
         $req=$connexion->query("INSERT INTO etudiant(ID_CLASSES,NOM,PRENOM,MAIL,MDP) values('$cur','$nom','$prenom','$mail','$mdp')");
         if($req){
-            echo "inscription effectué";
+            echo "inscription effectué"."<br>";
+            ?>
+            <html><a href="./pageconnect.php">cliquz ici</a></html>
+            <?php
         
         }
         else {
@@ -23,7 +26,10 @@
     else{
         $req=$connexion->query("INSERT INTO professeurs(ID_CLASSES,ID_MATIERES,NOM,PRENOM,MAIL,MDP) values('$cur','$mat','$nom','$prenom','$mail','$mdp')");
         if($req){
-            echo "inscription effectué";
+            echo "inscription effectué"."<br>";
+            ?>
+            <html><a href="./pageconnect.php">cliquz ici</a></html>
+            <?php
         
         }
         else {
