@@ -4,7 +4,8 @@
     box-sizing: border-box;
    }
 body {
-    font-family: cursive;
+    font-family: Comic Sans MS;
+    background-color: #f8f8ff;
    }
 a {
     text-decoration: none;
@@ -50,10 +51,7 @@ li {
     float:right;
     margin-right: 50px;
 }
-body{
-    background-color: #f8f8ff;
-    font-style: Calisto;
-}
+
 footer h2,h6,.row{
     margin-left: 50px;
 }
