@@ -43,7 +43,7 @@
        
 
     ?>
-    <h1>Bonjour <?php echo $_SESSION['NOM']; ?> </h1>
+    <h1>Bonjour <?php echo $_SESSION['PRENOM'].' '.$_SESSION['NOM']; ?>  </h1>
         <h2> Bienvenue à votre page professeur!</h2>
         <div class="container p-4">
             <div class="row">

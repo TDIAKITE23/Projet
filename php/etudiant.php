@@ -43,7 +43,7 @@
        
 
     ?>
-    <h1>Bonjour <?php echo $_SESSION['NOM']; ?> </h1>
+    <h1>Bonjour <?php echo $_SESSION['PRENOM'].' '.$_SESSION['NOM']; ?> </h1>
         <h2> Bienvenue à votre page étudiant!</h2>
         <div class="container p-4">
             <div class="row">
@@ -87,9 +87,14 @@
                                 $ok=$_SESSION['ID_CLASSES'];
                                 $req=$connexion->query("SELECT * FROM professeurs WHERE ID_CLASSES=$ok");
                                 while($res=mysqli_fetch_array($req)){
+                                    $id=$res['ID_MATIERES'];
+                                    $req2=$connexion->query("SELECT NOM FROM matieres WHERE ID=$id");
+                                    while($res2=mysqli_fetch_array($req2)){
                                     ?>
-                                    <ul><li><?php echo $res['PRENOM']." ".$res['NOM'] ?></li></ul>
+                                    <ul><li><?php echo $res['PRENOM']." ".$res['NOM']." "."(".$res2['NOM'].")" ?></li></ul>
                                     <?php
+
+                                    }
                                     
                                 }
 
