@@ -47,7 +47,6 @@
         
 
     ?>
-    <hr>
     <button class="btn btn-outline-primary"><a href="../html/inscription.html">Inscrire un étudiant</a></button>
 </body>
 </html>
