@@ -1,0 +1,10 @@
+table.myclass td {
+    background-color: #f8f8ff;
+    border-spacing: 5cm;
+}
+table.myclass {
+    column-width: 6cm;
+    column-gap: 6cm;
+    margin: 20px;
+    width: 40%;
+}

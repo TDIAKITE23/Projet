@@ -26,6 +26,8 @@
         </div>
         <div>
             <button class="btn btn-dark" type="button"><i class="fas fa-user-tie"></i>
+                <a class ="lien" href="./modifierprof2.php">UPDATE</a></button>
+            <button class="btn btn-dark" type="button"><i class="fas fa-user-tie"></i>
                 <a class ="lien" href="../php/deconnexion.php">deconnexion</a></button>
         </div>
       </nav>
