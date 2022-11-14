@@ -101,7 +101,26 @@
                                     $res=mysqli_fetch_array($req);
                                     echo $res['NOM'];
                                 
-                                    ?></h5>
+                                    ?></h5><br><br>
+
+                                <?php if($_SESSION['ID_CLASSES']==1){
+                                    ?>
+                                    <h4>Pour accéder à votre emploi du temps, <a href="../html/emploi3.html">cliquez ici</a>
+                                    <?php
+                                }
+                                ?>
+                                <?php if($_SESSION['ID_CLASSES']==2){
+                                    ?>
+                                    <h4>Pour accéder à votre emploi du temps, <a href="../html/emploi2.html">cliquez ici</a>
+                                    <?php
+                                }
+                                ?>
+                                <?php if($_SESSION['ID_CLASSES']==3){
+                                    ?>
+                                    <h4>Pour accéder à votre emploi du temps, <a href="../html/emploi1.html">cliquez ici</a>
+                                    <?php
+                                }
+                                ?>
                             
                             
                         </div>

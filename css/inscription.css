@@ -6,6 +6,9 @@
 body {
     font-family: Comic Sans MS;
     background-color:white;
+    /*background-image: url("../img/etudiant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
    }
 a {
     text-decoration: none;
@@ -69,6 +72,10 @@ fieldset {
   input {
     margin: 5px;
   }
+
+form{
+    height: 110%;
+}
 
 
 
